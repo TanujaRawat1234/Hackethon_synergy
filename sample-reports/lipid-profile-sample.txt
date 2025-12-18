@@ -1,0 +1,115 @@
+=====================================
+    LIPID PROFILE REPORT
+=====================================
+
+Patient Name: Robert Williams
+Patient ID: P11223
+Age: 48 Years | Gender: Male
+Date: December 16, 2025
+Lab: HealthCare Diagnostics
+
+-------------------------------------
+LIPID PANEL RESULTS
+-------------------------------------
+
+TOTAL CHOLESTEROL
+Result: 185 mg/dL
+Desirable: <200 mg/dL
+Borderline High: 200-239 mg/dL
+High: ≥240 mg/dL
+Status: DESIRABLE ✓
+
+LOW-DENSITY LIPOPROTEIN (LDL) - "Bad Cholesterol"
+Result: 110 mg/dL
+Optimal: <100 mg/dL
+Near Optimal: 100-129 mg/dL
+Borderline High: 130-159 mg/dL
+High: ≥160 mg/dL
+Status: NEAR OPTIMAL
+
+HIGH-DENSITY LIPOPROTEIN (HDL) - "Good Cholesterol"
+Result: 55 mg/dL
+Low (Risk): <40 mg/dL (Men), <50 mg/dL (Women)
+Desirable: ≥60 mg/dL
+Status: ACCEPTABLE ✓
+
+TRIGLYCERIDES
+Result: 120 mg/dL
+Normal: <150 mg/dL
+Borderline High: 150-199 mg/dL
+High: 200-499 mg/dL
+Very High: ≥500 mg/dL
+Status: NORMAL ✓
+
+VLDL CHOLESTEROL (Calculated)
+Result: 24 mg/dL
+Normal Range: 5-40 mg/dL
+Status: NORMAL ✓
+
+-------------------------------------
+CHOLESTEROL RATIOS
+-------------------------------------
+
+TOTAL CHOLESTEROL / HDL RATIO
+Result: 3.4
+Optimal: <3.5
+Status: OPTIMAL ✓
+
+LDL / HDL RATIO
+Result: 2.0
+Optimal: <2.5
+Status: OPTIMAL ✓
+
+NON-HDL CHOLESTEROL
+Result: 130 mg/dL
+Optimal: <130 mg/dL
+Status: OPTIMAL ✓
+
+-------------------------------------
+CARDIOVASCULAR RISK ASSESSMENT
+-------------------------------------
+
+Overall Risk: LOW TO MODERATE
+
+Positive Factors:
+✓ Total cholesterol within desirable range
+✓ HDL cholesterol adequate
+✓ Triglycerides normal
+✓ Good cholesterol ratios
+
+Areas for Improvement:
+• LDL slightly above optimal (target <100 mg/dL)
+• HDL could be higher (target ≥60 mg/dL)
+
+-------------------------------------
+RECOMMENDATIONS
+-------------------------------------
+
+LIFESTYLE MODIFICATIONS:
+1. Diet:
+   - Reduce saturated fats
+   - Increase omega-3 fatty acids (fish, nuts)
+   - Add more fiber (oats, beans, vegetables)
+   - Limit trans fats and processed foods
+
+2. Exercise:
+   - 30 minutes moderate activity, 5 days/week
+   - Include aerobic and strength training
+
+3. Weight Management:
+   - Maintain healthy BMI (18.5-24.9)
+
+4. Other:
+   - Avoid smoking
+   - Limit alcohol consumption
+   - Manage stress
+
+FOLLOW-UP:
+Retest in 6 months to monitor progress.
+Consider statin therapy if LDL remains >130 mg/dL.
+
+Verified by: Dr. Emily Rodriguez, MD
+Cardiologist
+License No: MD-33445
+
+=====================================

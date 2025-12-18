@@ -1,0 +1,75 @@
+=====================================
+    COMPLETE BLOOD COUNT (CBC) REPORT
+=====================================
+
+Patient Name: John Doe
+Patient ID: P12345
+Age: 35 Years | Gender: Male
+Date: December 16, 2025
+Lab: HealthCare Diagnostics
+
+-------------------------------------
+TEST RESULTS
+-------------------------------------
+
+HEMOGLOBIN
+Result: 14.5 g/dL
+Normal Range: 13.5-17.5 g/dL
+Status: NORMAL
+
+RED BLOOD CELL COUNT (RBC)
+Result: 5.2 million/µL
+Normal Range: 4.5-5.5 million/µL
+Status: NORMAL
+
+WHITE BLOOD CELL COUNT (WBC)
+Result: 7,500 cells/µL
+Normal Range: 4,000-11,000 cells/µL
+Status: NORMAL
+
+PLATELET COUNT
+Result: 250,000 cells/µL
+Normal Range: 150,000-450,000 cells/µL
+Status: NORMAL
+
+HEMATOCRIT (HCT)
+Result: 42%
+Normal Range: 38-50%
+Status: NORMAL
+
+MEAN CORPUSCULAR VOLUME (MCV)
+Result: 88 fL
+Normal Range: 80-100 fL
+Status: NORMAL
+
+MEAN CORPUSCULAR HEMOGLOBIN (MCH)
+Result: 29 pg
+Normal Range: 27-33 pg
+Status: NORMAL
+
+MEAN CORPUSCULAR HEMOGLOBIN CONCENTRATION (MCHC)
+Result: 33 g/dL
+Normal Range: 32-36 g/dL
+Status: NORMAL
+
+-------------------------------------
+DIFFERENTIAL COUNT
+-------------------------------------
+
+NEUTROPHILS: 60% (Normal: 40-70%)
+LYMPHOCYTES: 30% (Normal: 20-40%)
+MONOCYTES: 6% (Normal: 2-8%)
+EOSINOPHILS: 3% (Normal: 1-4%)
+BASOPHILS: 1% (Normal: 0-1%)
+
+-------------------------------------
+INTERPRETATION
+-------------------------------------
+All parameters are within normal limits.
+No abnormalities detected.
+
+Verified by: Dr. Sarah Johnson, MD
+Lab Director
+License No: MD-12345
+
+=====================================

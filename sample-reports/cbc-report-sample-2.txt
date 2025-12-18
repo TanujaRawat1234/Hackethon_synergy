@@ -1,0 +1,81 @@
+=====================================
+    COMPLETE BLOOD COUNT (CBC) REPORT
+=====================================
+
+Patient Name: John Doe
+Patient ID: P12345
+Age: 35 Years | Gender: Male
+Date: September 10, 2025 (3 months earlier)
+Lab: HealthCare Diagnostics
+
+-------------------------------------
+TEST RESULTS
+-------------------------------------
+
+HEMOGLOBIN
+Result: 13.2 g/dL
+Normal Range: 13.5-17.5 g/dL
+Status: LOW ⚠️
+
+RED BLOOD CELL COUNT (RBC)
+Result: 4.8 million/µL
+Normal Range: 4.5-5.5 million/µL
+Status: NORMAL
+
+WHITE BLOOD CELL COUNT (WBC)
+Result: 8,200 cells/µL
+Normal Range: 4,000-11,000 cells/µL
+Status: NORMAL
+
+PLATELET COUNT
+Result: 230,000 cells/µL
+Normal Range: 150,000-450,000 cells/µL
+Status: NORMAL
+
+HEMATOCRIT (HCT)
+Result: 38%
+Normal Range: 38-50%
+Status: BORDERLINE LOW
+
+MEAN CORPUSCULAR VOLUME (MCV)
+Result: 82 fL
+Normal Range: 80-100 fL
+Status: NORMAL
+
+MEAN CORPUSCULAR HEMOGLOBIN (MCH)
+Result: 26 pg
+Normal Range: 27-33 pg
+Status: LOW ⚠️
+
+MEAN CORPUSCULAR HEMOGLOBIN CONCENTRATION (MCHC)
+Result: 31 g/dL
+Normal Range: 32-36 g/dL
+Status: LOW ⚠️
+
+-------------------------------------
+DIFFERENTIAL COUNT
+-------------------------------------
+
+NEUTROPHILS: 58% (Normal: 40-70%)
+LYMPHOCYTES: 32% (Normal: 20-40%)
+MONOCYTES: 6% (Normal: 2-8%)
+EOSINOPHILS: 3% (Normal: 1-4%)
+BASOPHILS: 1% (Normal: 0-1%)
+
+-------------------------------------
+INTERPRETATION
+-------------------------------------
+Mild anemia detected (low hemoglobin).
+Possible iron deficiency anemia.
+Further evaluation recommended.
+
+RECOMMENDATIONS:
+- Iron supplementation
+- Dietary modifications (iron-rich foods)
+- Follow-up CBC in 3 months
+
+Verified by: Dr. Sarah Johnson, MD
+Lab Director
+License No: MD-12345
+
+=====================================

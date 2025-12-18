@@ -1,0 +1,79 @@
+=====================================
+    BLOOD SUGAR TEST REPORT
+=====================================
+
+Patient Name: Jane Smith
+Patient ID: P67890
+Age: 42 Years | Gender: Female
+Date: August 20, 2025 (4 months earlier)
+Lab: HealthCare Diagnostics
+
+-------------------------------------
+GLUCOSE TESTS
+-------------------------------------
+
+FASTING BLOOD SUGAR (FBS)
+Result: 112 mg/dL
+Normal Range: 70-100 mg/dL
+Status: ELEVATED ⚠️
+Fasting Duration: 10 hours
+
+POST PRANDIAL BLOOD SUGAR (PPBS)
+Result: 165 mg/dL
+Normal Range: <140 mg/dL (2 hours after meal)
+Status: ELEVATED ⚠️
+
+RANDOM BLOOD SUGAR
+Result: 145 mg/dL
+Normal Range: <140 mg/dL
+Status: ELEVATED ⚠️
+
+-------------------------------------
+GLYCATED HEMOGLOBIN (HbA1c)
+-------------------------------------
+
+HbA1c Level: 6.1%
+Normal Range: <5.7%
+Status: PREDIABETES ⚠️
+
+Interpretation:
+- <5.7%: Normal (No Diabetes)
+- 5.7-6.4%: Prediabetes ⚠️
+- ≥6.5%: Diabetes
+
+Estimated Average Glucose (eAG): 128 mg/dL
+
+-------------------------------------
+CLINICAL NOTES
+-------------------------------------
+
+Patient shows signs of PREDIABETES.
+Glucose levels consistently elevated.
+HbA1c indicates borderline glucose control over past 3 months.
+
+URGENT RECOMMENDATIONS:
+⚠️ Lifestyle modifications required immediately
+⚠️ Weight loss if overweight (target: 5-10% body weight)
+⚠️ Dietary changes - reduce refined carbs and sugars
+⚠️ Increase physical activity - 150 min/week minimum
+⚠️ Monitor blood sugar regularly at home
+
+-------------------------------------
+RISK ASSESSMENT
+-------------------------------------
+
+Diabetes Risk: HIGH
+Current Status: PREDIABETES
+Action Required: IMMEDIATE LIFESTYLE CHANGES
+
+FOLLOW-UP PLAN:
+- Retest HbA1c in 3 months
+- Consult with dietitian
+- Consider diabetes education program
+- Monitor for symptoms (increased thirst, frequent urination)
+
+Verified by: Dr. Michael Chen, MD
+Endocrinologist
+License No: MD-67890
+
+=====================================

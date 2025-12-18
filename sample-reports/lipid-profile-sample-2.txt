@@ -1,0 +1,136 @@
+=====================================
+    LIPID PROFILE REPORT
+=====================================
+
+Patient Name: Robert Williams
+Patient ID: P11223
+Age: 48 Years | Gender: Male
+Date: July 15, 2025 (5 months earlier)
+Lab: HealthCare Diagnostics
+
+-------------------------------------
+LIPID PANEL RESULTS
+-------------------------------------
+
+TOTAL CHOLESTEROL
+Result: 245 mg/dL
+Desirable: <200 mg/dL
+Borderline High: 200-239 mg/dL
+High: ≥240 mg/dL
+Status: HIGH ⚠️
+
+LOW-DENSITY LIPOPROTEIN (LDL) - "Bad Cholesterol"
+Result: 165 mg/dL
+Optimal: <100 mg/dL
+Near Optimal: 100-129 mg/dL
+Borderline High: 130-159 mg/dL
+High: ≥160 mg/dL
+Status: HIGH ⚠️
+
+HIGH-DENSITY LIPOPROTEIN (HDL) - "Good Cholesterol"
+Result: 42 mg/dL
+Low (Risk): <40 mg/dL (Men), <50 mg/dL (Women)
+Desirable: ≥60 mg/dL
+Status: LOW ⚠️
+
+TRIGLYCERIDES
+Result: 195 mg/dL
+Normal: <150 mg/dL
+Borderline High: 150-199 mg/dL
+High: 200-499 mg/dL
+Very High: ≥500 mg/dL
+Status: BORDERLINE HIGH ⚠️
+
+VLDL CHOLESTEROL (Calculated)
+Result: 39 mg/dL
+Normal Range: 5-40 mg/dL
+Status: BORDERLINE HIGH
+
+-------------------------------------
+CHOLESTEROL RATIOS
+-------------------------------------
+
+TOTAL CHOLESTEROL / HDL RATIO
+Result: 5.8
+Optimal: <3.5
+Status: HIGH RISK ⚠️
+
+LDL / HDL RATIO
+Result: 3.9
+Optimal: <2.5
+Status: HIGH RISK ⚠️
+
+NON-HDL CHOLESTEROL
+Result: 203 mg/dL
+Optimal: <130 mg/dL
+Status: HIGH ⚠️
+
+-------------------------------------
+CARDIOVASCULAR RISK ASSESSMENT
+-------------------------------------
+
+Overall Risk: HIGH ⚠️
+
+Risk Factors Present:
+⚠️ Total cholesterol significantly elevated
+⚠️ LDL cholesterol high
+⚠️ HDL cholesterol low (protective factor reduced)
+⚠️ Triglycerides borderline high
+⚠️ Poor cholesterol ratios
+
+IMMEDIATE CONCERNS:
+• Increased risk of heart disease
+• Increased risk of stroke
+• Atherosclerosis risk
+• Metabolic syndrome indicators
+
+-------------------------------------
+RECOMMENDATIONS
+-------------------------------------
+
+URGENT ACTIONS REQUIRED:
+
+1. MEDICATION:
+   ⚠️ Statin therapy recommended
+   ⚠️ Consult cardiologist immediately
+
+2. LIFESTYLE MODIFICATIONS (CRITICAL):
+   - DIET: Strict low-fat, low-cholesterol diet
+     * Eliminate trans fats completely
+     * Reduce saturated fats to <7% of calories
+     * Increase soluble fiber to 10-25g/day
+     * Add plant sterols/stanols
+   
+   - EXERCISE: Mandatory
+     * 45-60 minutes daily
+     * Combination of cardio and strength training
+   
+   - WEIGHT LOSS: If overweight
+     * Target: 10% body weight reduction
+   
+   - SMOKING: Quit immediately if applicable
+   
+   - ALCOHOL: Limit or eliminate
+
+3. MONITORING:
+   - Retest lipid profile in 6-8 weeks after starting treatment
+   - Monthly follow-ups with cardiologist
+   - Home monitoring of blood pressure
+
+4. ADDITIONAL TESTS RECOMMENDED:
+   - Cardiac stress test
+   - Carotid ultrasound
+   - Blood pressure monitoring
+   - Diabetes screening (HbA1c)
+
+PROGNOSIS:
+With aggressive treatment and lifestyle changes, 
+significant improvement expected within 3-6 months.
+
+Verified by: Dr. Emily Rodriguez, MD
+Cardiologist
+License No: MD-33445
+
+⚠️ URGENT: Schedule cardiology consultation within 1 week
+
+=====================================

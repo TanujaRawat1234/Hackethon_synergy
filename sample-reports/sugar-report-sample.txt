@@ -1,0 +1,70 @@
+=====================================
+    BLOOD SUGAR TEST REPORT
+=====================================
+
+Patient Name: Jane Smith
+Patient ID: P67890
+Age: 42 Years | Gender: Female
+Date: December 16, 2025
+Lab: HealthCare Diagnostics
+
+-------------------------------------
+GLUCOSE TESTS
+-------------------------------------
+
+FASTING BLOOD SUGAR (FBS)
+Result: 95 mg/dL
+Normal Range: 70-100 mg/dL
+Status: NORMAL
+Fasting Duration: 10 hours
+
+POST PRANDIAL BLOOD SUGAR (PPBS)
+Result: 135 mg/dL
+Normal Range: <140 mg/dL (2 hours after meal)
+Status: NORMAL
+
+RANDOM BLOOD SUGAR
+Result: 110 mg/dL
+Normal Range: <140 mg/dL
+Status: NORMAL
+
+-------------------------------------
+GLYCATED HEMOGLOBIN (HbA1c)
+-------------------------------------
+
+HbA1c Level: 5.4%
+Normal Range: <5.7%
+Status: NORMAL
+
+Interpretation:
+- <5.7%: Normal (No Diabetes)
+- 5.7-6.4%: Prediabetes
+- ≥6.5%: Diabetes
+
+Estimated Average Glucose (eAG): 108 mg/dL
+
+-------------------------------------
+CLINICAL NOTES
+-------------------------------------
+
+Patient shows excellent glucose control.
+No signs of diabetes or prediabetes.
+HbA1c indicates good 3-month average glucose levels.
+
+RECOMMENDATIONS:
+✓ Maintain current diet and lifestyle
+✓ Continue regular physical activity
+✓ Retest in 12 months for routine monitoring
+
+-------------------------------------
+RISK ASSESSMENT
+-------------------------------------
+
+Diabetes Risk: LOW
+Current Status: Healthy glucose metabolism
+
+Verified by: Dr. Michael Chen, MD
+Endocrinologist
+License No: MD-67890
+
+=====================================
