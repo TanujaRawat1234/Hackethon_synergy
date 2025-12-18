@@ -48,3 +48,4 @@ uploads/medical-reports/*
 
 # Temp files for OCR processing
 temp/
+.env
