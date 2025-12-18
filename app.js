@@ -35,7 +35,7 @@ app.use(helmet({contentSecurityPolicy :false}));
 
 app.use(function (req, res, next) {
   //res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
-  const allowedOrigins = ['https://medilens.thesynergyworks.com','http://localhost:5173'];
+  const allowedOrigins = ['https://medilens.thesynergyworks.com','http://localhost:5173','http://127.0.0.1:5173'];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
     res.setHeader('Access-Control-Allow-Origin', origin);
