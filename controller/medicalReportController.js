@@ -62,7 +62,7 @@ class MedicalReportController {
         report_type,
       });
 
-      return ApiResponse.success(res, result);
+      return ApiResponse.SuccessResponseWithData(res, result);
     } catch (error) {
       logger.error('Get user reports controller error:', error);
       next(error);
