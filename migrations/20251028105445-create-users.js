@@ -4,7 +4,7 @@ const { v4: uuidv4 } = require('uuid');
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Users', {
+    await queryInterface.createTable('users', {
       id: {
         allowNull: false,
         primaryKey: true,
@@ -53,11 +53,11 @@ module.exports = {
     });
 
     // Add an index on email for quick lookup
-    await queryInterface.addIndex('Users', ['email']);
+    await queryInterface.addIndex('users', ['email']);
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Users');
+    await queryInterface.dropTable('users');
     await queryInterface.sequelize.query('DROP TYPE IF EXISTS `enum_Users_gender`');
   },
 };
