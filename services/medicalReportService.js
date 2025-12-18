@@ -191,7 +191,7 @@ class MedicalReportService {
         where: {
           user_id: userId,
           report_type: currentReport.report_type,
-          createdAt: { [Op.gt]: currentReport.createdAt }, // Uploaded before current
+          createdAt: { [Op.lt]: currentReport.createdAt }, // Uploaded before current
           status: 'completed',
           id: { [Op.ne]: reportId } // Exclude current report
         },
@@ -263,7 +263,6 @@ class MedicalReportService {
       const reports = await MedicalReport.findAll({
         where: {
           user_id: userId,
-          // report_date: { [Op.gte]: startDate },
           status: 'completed',
         },
         include: [
@@ -273,22 +272,128 @@ class MedicalReportService {
             where: { metric_name: metricName },
           },
         ],
-        order: [['report_date', 'ASC']],
+        order: [['createdAt', 'ASC']],
       });
 
       const trends = reports.map((report) => ({
-        date: report.report_date,
+        report_id: report.id,
+        date: report.createdAt,
+        report_date: report.report_date,
         value: report.metrics[0]?.metric_value,
         unit: report.metrics[0]?.metric_unit,
         status: report.metrics[0]?.status,
+        normal_range: report.metrics[0]?.normal_range,
       }));
 
       return {
         metric_name: metricName,
+        display_name: this.getMetricDisplayName(metricName),
         data_points: trends,
+        total_reports: trends.length,
       };
     } catch (error) {
       logger.error('Get health trends error:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get all metrics across all reports for trend analysis
+   */
+  async getAllMetricsTrends(userId, reportType = null, months = 6) {
+    try {
+      const whereClause = {
+        user_id: userId,
+        status: 'completed',
+      };
+
+      if (reportType) {
+        whereClause.report_type = reportType;
+      }
+
+      const reports = await MedicalReport.findAll({
+        where: whereClause,
+        include: [
+          {
+            model: ReportMetric,
+            as: 'metrics',
+          },
+        ],
+        order: [['createdAt', 'ASC']],
+      });
+
+      // Group metrics by metric_name
+      const metricsTrends = {};
+
+      reports.forEach((report) => {
+        report.metrics.forEach((metric) => {
+          if (!metricsTrends[metric.metric_name]) {
+            metricsTrends[metric.metric_name] = {
+              metric_name: metric.metric_name,
+              display_name: this.getMetricDisplayName(metric.metric_name),
+              unit: metric.metric_unit,
+              data_points: [],
+            };
+          }
+
+          metricsTrends[metric.metric_name].data_points.push({
+            report_id: report.id,
+            date: report.createdAt,
+            report_date: report.report_date,
+            report_type: report.report_type,
+            value: metric.metric_value,
+            numeric_value: parseFloat(metric.metric_value.replace(/,/g, '')),
+            status: metric.status,
+            normal_range: metric.normal_range,
+          });
+        });
+      });
+
+      // Convert to array and add trend analysis
+      const trendsArray = Object.values(metricsTrends).map((metricTrend) => {
+        const dataPoints = metricTrend.data_points;
+        
+        // Calculate trend direction
+        let trendDirection = 'stable';
+        if (dataPoints.length >= 2) {
+          const firstValue = dataPoints[0].numeric_value;
+          const lastValue = dataPoints[dataPoints.length - 1].numeric_value;
+          const change = ((lastValue - firstValue) / firstValue) * 100;
+
+          if (change > 5) trendDirection = 'increasing';
+          else if (change < -5) trendDirection = 'decreasing';
+        }
+
+        // Calculate average
+        const average = dataPoints.reduce((sum, dp) => sum + dp.numeric_value, 0) / dataPoints.length;
+
+        // Count status distribution
+        const statusCounts = {
+          normal: dataPoints.filter(dp => dp.status === 'normal').length,
+          low: dataPoints.filter(dp => dp.status === 'low').length,
+          high: dataPoints.filter(dp => dp.status === 'high').length,
+          critical: dataPoints.filter(dp => dp.status === 'critical').length,
+        };
+
+        return {
+          ...metricTrend,
+          trend_direction: trendDirection,
+          average_value: average.toFixed(2),
+          total_readings: dataPoints.length,
+          status_distribution: statusCounts,
+          latest_value: dataPoints[dataPoints.length - 1].value,
+          latest_status: dataPoints[dataPoints.length - 1].status,
+        };
+      });
+
+      return {
+        user_id: userId,
+        report_type: reportType || 'all',
+        total_reports: reports.length,
+        metrics: trendsArray,
+      };
+    } catch (error) {
+      logger.error('Get all metrics trends error:', error);
       throw error;
     }
   }

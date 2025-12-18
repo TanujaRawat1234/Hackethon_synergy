@@ -78,6 +78,53 @@ router.get('/', medicalReportController.getUserReports);
 
 /**
  * @swagger
+ * /api/medical-reports/trends/all:
+ *   get:
+ *     summary: Get all metrics trends across all reports
+ *     tags: [Medical Reports]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: query
+ *         name: report_type
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: months
+ *         schema:
+ *           type: integer
+ *     responses:
+ *       200:
+ *         description: All metrics trends data
+ */
+router.get('/trends/all', medicalReportController.getAllMetricsTrends);
+
+/**
+ * @swagger
+ * /api/medical-reports/trends/data:
+ *   get:
+ *     summary: Get health trends for specific metric
+ *     tags: [Medical Reports]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: query
+ *         name: metric_name
+ *         required: true
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: months
+ *         schema:
+ *           type: integer
+ *     responses:
+ *       200:
+ *         description: Health trends data
+ */
+router.get('/trends/data', medicalReportController.getHealthTrends);
+
+/**
+ * @swagger
  * /api/medical-reports/{reportId}:
  *   get:
  *     summary: Get single report details
@@ -115,30 +162,6 @@ router.get('/:reportId', medicalReportController.getReportById);
  *         description: Comparison results
  */
 router.get('/:reportId/compare', medicalReportController.compareWithPrevious);
-
-/**
- * @swagger
- * /api/medical-reports/trends:
- *   get:
- *     summary: Get health trends for specific metric
- *     tags: [Medical Reports]
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: query
- *         name: metric_name
- *         required: true
- *         schema:
- *           type: string
- *       - in: query
- *         name: months
- *         schema:
- *           type: integer
- *     responses:
- *       200:
- *         description: Health trends data
- */
-router.get('/trends/data', medicalReportController.getHealthTrends);
 
 /**
  * @swagger

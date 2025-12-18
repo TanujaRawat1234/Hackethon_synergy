@@ -134,7 +134,7 @@ class MedicalReportController {
   }
 
   /**
-   * Get health trends
+   * Get health trends for specific metric
    */
   async getHealthTrends(req, res, next) {
     try {
@@ -142,7 +142,7 @@ class MedicalReportController {
       const { metric_name, months } = req.query;
 
       if (!metric_name) {
-        return ApiResponse.InternalServerError(res, 'metric_name is required', 400);
+        return ApiResponse.error(res, 'metric_name is required', 400);
       }
 
       const trends = await medicalReportService.getHealthTrends(
@@ -154,6 +154,27 @@ class MedicalReportController {
       return ApiResponse.SuccessResponseWithData(res, trends);
     } catch (error) {
       logger.error('Get health trends controller error:', error);
+      next(error);
+    }
+  }
+
+  /**
+   * Get all metrics trends across all reports
+   */
+  async getAllMetricsTrends(req, res, next) {
+    try {
+      const userId = req.user.id;
+      const { report_type, months } = req.query;
+
+      const trends = await medicalReportService.getAllMetricsTrends(
+        userId,
+        report_type,
+        parseInt(months) || 6
+      );
+
+      return ApiResponse.SuccessResponseWithData(res, trends);
+    } catch (error) {
+      logger.error('Get all metrics trends controller error:', error);
       next(error);
     }
   }
