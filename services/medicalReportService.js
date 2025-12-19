@@ -413,7 +413,8 @@ class MedicalReportService {
         throw error;
       }
 
-      await report.destroy();
+      // Use force: true for hard delete (actually removes from database)
+      await report.destroy({ force: true });
       return { message: 'Report deleted successfully' };
     } catch (error) {
       logger.error('Delete report error:', error);

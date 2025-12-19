@@ -89,6 +89,9 @@ module.exports = (sequelize, DataTypes) => {
         beforeUpdate: (record) => {
           record.dataValues.updatedAt = moment().valueOf();
         },
+        beforeDestroy: (record) => {
+          record.dataValues.deletedAt = moment().valueOf();
+        },
       },
     }
   );

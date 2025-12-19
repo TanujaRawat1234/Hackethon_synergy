@@ -189,7 +189,7 @@ class MedicalReportController {
 
       const result = await medicalReportService.deleteReport(reportId, userId);
 
-      return ApiResponse.success(res, result);
+      return ApiResponse.SuccessResponseWithData(res, result);
     } catch (error) {
       logger.error('Delete report controller error:', error);
       
