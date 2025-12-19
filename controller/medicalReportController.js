@@ -17,7 +17,7 @@ class MedicalReportController {
       const { report_type, report_date } = req.body;
 
       if (!req.file) {
-        return ApiResponse.error(res, 'No file uploaded', 400);
+        return ApiResponse.FailedResponseWithOutData(res, 'No file uploaded');
       }
 
       // For local storage, construct the file URL
@@ -100,7 +100,7 @@ class MedicalReportController {
       
       // Handle specific errors
       if (error.message.includes('Report not found')) {
-        return ApiResponse.error(res, error.message, error.statusCode || 404);
+        return ApiResponse.NotFound(res, error.message);
       }
       
       next(error);
@@ -126,7 +126,7 @@ class MedicalReportController {
       
       // Handle specific errors
       if (error.message.includes('Report not found')) {
-        return ApiResponse.error(res, error.message, error.statusCode || 404);
+        return ApiResponse.NotFound(res, error.message);
       }
       
       next(error);
@@ -142,7 +142,7 @@ class MedicalReportController {
       const { metric_name, months } = req.query;
 
       if (!metric_name) {
-        return ApiResponse.error(res, 'metric_name is required', 400);
+        return ApiResponse.FailedResponseWithOutData(res, 'metric_name is required');
       }
 
       const trends = await medicalReportService.getHealthTrends(
@@ -195,7 +195,7 @@ class MedicalReportController {
       
       // Handle specific errors
       if (error.message.includes('Report not found')) {
-        return ApiResponse.error(res, error.message, error.statusCode || 404);
+        return ApiResponse.NotFound(res, error.message);
       }
       
       next(error);
@@ -213,7 +213,7 @@ class MedicalReportController {
         description: REPORT_TYPE_DESCRIPTIONS[REPORT_TYPES[key]],
       }));
 
-      return ApiResponse.success(res, { report_types: reportTypes });
+      return ApiResponse.SuccessResponseWithData(res, { report_types: reportTypes });
     } catch (error) {
       logger.error('Get report types controller error:', error);
       next(error);

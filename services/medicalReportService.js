@@ -166,7 +166,22 @@ class MedicalReportService {
         throw error;
       }
 
-      return report;
+      // Check if there's a previous report of the same type
+      const previousReportCount = await MedicalReport.count({
+        where: {
+          user_id: userId,
+          report_type: report.report_type,
+          createdAt: { [Op.lt]: report.createdAt },
+          status: 'completed',
+          id: { [Op.ne]: reportId }
+        }
+      });
+
+      // Add flag to indicate if comparison is available
+      const reportData = report.toJSON();
+      reportData.has_previous_report = previousReportCount > 0;
+
+      return reportData;
     } catch (error) {
       logger.error('Get report by ID error:', error);
       throw error;
