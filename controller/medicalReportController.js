@@ -21,7 +21,10 @@ class MedicalReportController {
       }
 
       // For local storage, construct the file URL
-      const fileUrl = req.file.location || `/uploads/medical-reports/${req.file.filename}`;
+      // Use full URL for production, relative path for local
+      const baseUrl = process.env.BASE_URL || `${req.protocol}://${req.get('host')}`;
+      const relativePath = `/uploads/medical-reports/${req.file.filename}`;
+      const fileUrl = req.file.location || `${baseUrl}${relativePath}`;
       const filePath = req.file.path; // Absolute path for processing
 
       const reportData = {
@@ -62,6 +65,15 @@ class MedicalReportController {
         report_type,
       });
 
+      // Convert relative file URLs to absolute URLs
+      const baseUrl = process.env.BASE_URL || `${req.protocol}://${req.get('host')}`;
+      result.reports = result.reports.map(report => {
+        if (report.file_url && !report.file_url.startsWith('http')) {
+          report.file_url = `${baseUrl}${report.file_url}`;
+        }
+        return report;
+      });
+
       return ApiResponse.SuccessResponseWithData(res, result);
     } catch (error) {
       logger.error('Get user reports controller error:', error);
@@ -78,6 +90,12 @@ class MedicalReportController {
       const { reportId } = req.params;
 
       const report = await medicalReportService.getReportById(reportId, userId);
+
+      // Convert relative file URL to absolute URL if needed
+      if (report.file_url && !report.file_url.startsWith('http')) {
+        const baseUrl = process.env.BASE_URL || `${req.protocol}://${req.get('host')}`;
+        report.file_url = `${baseUrl}${report.file_url}`;
+      }
 
       // Generate smart recommendations
       const recommendations = recommendationService.generateRecommendations(
